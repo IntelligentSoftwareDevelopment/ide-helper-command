@@ -1,0 +1,26 @@
+{
+    "name": "isoftd/ide-helper-command",
+    "description": "Custom command to run ide helper from Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IntelligentSoftwareDevelopment\\IdeHelperCommand\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivan Rusev",
+            "email": "ins0mniac1van@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IntelligentSoftwareDevelopment\\IdeHelperCommand\\IdeHelperCommandServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
