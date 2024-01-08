@@ -1,6 +1,8 @@
 <?php
+
 namespace IntelligentSoftwareDevelopment\IdeHelperCommand;
 
+use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use IntelligentSoftwareDevelopment\IdeHelperCommand\Console\Commands\IdeHelperCommand;
 
@@ -9,12 +11,16 @@ class IdeHelperCommandServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->registerCommands();
+        if ($this->app->isLocal()) {
+            $this->app->register(IdeHelperServiceProvider::class);
+        }
     }
 
     public function boot(): void
     {
 
     }
+
     /**
      * Register the console commands for the package.
      *
