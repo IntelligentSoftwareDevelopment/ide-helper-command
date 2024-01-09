@@ -21,6 +21,8 @@
             ]
         }
     },
-    "minimum-stability": "dev",
-    "require": {}
+    "minimum-stability": "stable",
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.13@dev"
+    }
 }
